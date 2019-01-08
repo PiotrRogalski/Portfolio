@@ -4853,23 +4853,25 @@ input[type=button].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #3490dc;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
+  color: black;
+  background-color: #f8fafc;
+  border: 1px solid #6c757d;
+  margin-left: 5px;
+  border-radius: 5px;
 }
 
 .page-link:hover {
   z-index: 2;
-  color: #1d68a7;
+  color: #fff;
   text-decoration: none;
-  background-color: #e9ecef;
-  border-color: #dee2e6;
+  background-color: #77797c;
+  border-color: #6c757d;
 }
 
 .page-link:focus {
   z-index: 2;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
 }
 
 .page-link:not(:disabled):not(.disabled) {
@@ -4895,7 +4897,7 @@ input[type=button].btn-block {
 }
 
 .page-item.disabled .page-link {
-  color: #6c757d;
+  color: #b3b6ba;
   pointer-events: none;
   cursor: auto;
   background-color: #fff;
@@ -12581,3 +12583,6 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+a:hover{
+  text-decoration: none;
+}

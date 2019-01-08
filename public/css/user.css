@@ -19,17 +19,19 @@ h6 {
 }
 
 header.masthead {
+  height: 100vh;
   position: relative;
   background-color: #343a40;
-  background: url("http://localhost/Portfolio/public/images/bg5.jpg") no-repeat center center fixed;
+  background: url("/images/bg2.jpeg") no-repeat center center fixed;
   background-size: cover;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 25vh;
 }
 
 header.masthead .overlay {
   position: absolute;
   background-color: #212529;
+  background: -webkit-linear-gradient(-139deg, rgb(254, 254, 254), rgb(0, 0, 0));
+  background: linear-gradient(-139deg, rgb(254, 254, 254), rgb(0, 0, 0));
   height: 100%;
   width: 100%;
   top: 0;
@@ -41,15 +43,87 @@ header.masthead h1 {
   font-size: 2rem;
 }
 
-@media (min-width: 768px) {
-  header.masthead {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+.full-stack-text {
+  font-size: 80px;
+}
+
+.piotr-roglaski-text {
+  font-size: 64px; 
+  text-shadow: 2px 2px 2px black;
+}
+
+
+
+@media (max-width: 550px) {
+
+  .full-stack-text {
+    font-size:48px;
   }
+
+  .piotr-roglaski-text {
+    font-size: 48px; 
+  }
+}
+
+@media (min-width: 520px) {
+  
+   header.masthead {
+    padding-top: 35vh;
+   }
+
+  .full-stack-text {
+    font-size:60px;
+  }
+
+  .piotr-roglaski-text {
+    font-size: 54px; 
+  }
+}
+
+@media (min-width: 768px) {
+
   header.masthead h1 {
     font-size: 3rem;
   }
+
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+
+  .window-container-width {
+    max-width: 100vw;
+  }
+
+  .showProject-container {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+
+  .full-stack-text {
+    font-size:80px;
+  }
+
+  .piotr-roglaski-text {
+    font-size: 64px; 
+  }
 }
+
+
+@media (min-width: 2000px) {
+    header.masthead {
+    height: 30vh;
+    padding-top: 10vh;
+  }  
+
+    .window-container-width {
+    max-width: 2000px;
+  }
+  
+  .showProject-container {
+    max-width: 1800px;
+  }
+
+  }
 
 .showcase .showcase-text {
   padding: 3rem;
@@ -58,33 +132,6 @@ header.masthead h1 {
 .showcase .showcase-img {
   min-height: 30rem;
   background-size: cover;
-}
-
-@media (min-width: 768px) {
-  .showcase .showcase-text {
-    padding: 7rem;
-  }
-}
-
-.features-icons {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-}
-
-.features-icons .features-icons-item {
-  max-width: 20rem;
-}
-
-.features-icons .features-icons-item .features-icons-icon {
-  height: 7rem;
-}
-
-.features-icons .features-icons-item .features-icons-icon i {
-  font-size: 4.5rem;
-}
-
-.features-icons .features-icons-item:hover .features-icons-icon i {
-  font-size: 5rem;
 }
 
 .testimonials {
@@ -124,4 +171,74 @@ header.masthead h1 {
 footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.back-to-top {
+    font-size: 54px;
+    width: 60px;
+    height: 60px;
+    line-height: 1em;
+    position: fixed;
+    z-index: 999;
+    right: 15px;
+    bottom: 40px;
+    background: center 43% no-repeat #555;
+    color: black;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.back-to-top:hover {
+  background-color: #222;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.back-to-top:active {
+  background-color: black;
+  opacity: 1;
+}
+
+.show-back-to-top-button{
+  visibility: visible;
+  opacity: .6;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-big {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text-shadow-sm {
+  text-shadow: 1px 1px 1px black;
+}
+
+.lora {
+    font-family: 'Lora', serif;
+}
+
+.vh-carousel {
+  max-height: 100vh; 
+}
+
+/*helpers*/
+.red {
+    border: 2px solid red;
+  }
+
+.blue {
+  border: 4px solid blue;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

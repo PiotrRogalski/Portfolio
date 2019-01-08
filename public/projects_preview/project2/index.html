@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<title>Piotr Rogalski - Portfolio</title>
+	<meta name="description" content="Stworzę dla Ciebie wyjątkową stronę www! Zatrudnij programistę frontednowego: HTML, CSS"/>
+	<meta name="keywords" content="zamów stronę, strona, tworzenie, www,programista, frontend,portfolio,html,css"/>
+	
+	<meta charset="utf8"/>
+	<!--dla uzytkownikow IExplorer wymusza najwyzsza wersje-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<link rel="stylesheet" href="fontello/css/fontello.css" type="text/css"/>
+	
+	<!-- czcionka -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&amp;subset=latin-ext" rel="stylesheet"> 
+</head>
+<body>
+
+	<div id="container">
+		
+		<div class="rectangle">
+			<div id="logo" onclick="k5()">Piotr Rogalski</div>
+			<div id="zegar"></div>
+			<div style="clear:both"></div>
+		</div>
+		
+		<div class="square">
+			<div class="tile1" onclick="k1()">
+				<i class="icon-user"></i> <br/>
+				Kim jestem?
+			</div>
+			<div class="tile1" onclick="k2()">
+				<i class="icon-laptop"></i> <br/>
+				Co oferuje?
+			</div>
+			<div style="clear:both"></div>
+			
+			<div class="tile2" onclick="k3()">
+				<i class="icon-graduation-cap"></i> <br/>
+				Curriculum vitae
+			</div>
+			<div class="tile3" onclick="k4()">
+				<i class="icon-mail"></i> <br/>
+				Napisz do mnie
+			</div>
+			<div style="clear:both"></div>
+			
+			<div class="tile4">
+				<i>Talk is cheap. Show me the code! </i><br/>-Linus Tovalds, twórca Linuxa
+			</div>
+		</div>
+		
+		<div class="square">
+			<div id="tile5">
+				<h1>STRONA GŁÓWNA</h1><br/>Lorem, viverra in elit in, faucibus efficitur mi. Curabitur orci orci, tempor id aliquam eget, rutrum eget neque. Mauris scelerisque ant, convallis ac odio.
+			</div>
+			
+			<a href="https://www.youtube.com" class="link" target="_blank">
+				<div class="yt">
+					<i class="icon-youtube"></i> 
+				</div>
+			</a>
+			<a href="https://www.facebook.com/" class="link"  target="_blank">
+				<div class="fb">
+					<i class="icon-facebook"></i> 
+				</div>
+			</a>
+			<a href="https://plus.google.com/" class="link"  target="_blank">
+				<div class="gplus">
+					<i class="icon-gplus"></i> 
+				</div>
+			</a>
+				<div class="tw" onclick="wyswietl_tw()">
+					<i class="icon-twitter"></i> 
+				</div>
+				<div style="clear:both"></div>
+		
+		</div>
+		
+		<div style="clear:both"></div>
+		
+		<div class="rectangle">
+			2018 &copy; Piotr Rogalski - Portfolio. Programista webowy zaprasza do współpracy! 
+			<i class="icon-mail-alt"></i>
+			piotr-example@gmail.com
+		</div>
+
+	</div>
+
+<script type="text/javascript">
+
+	function k1()
+	{
+		document.getElementById("tile5").innerHTML = '<h1>Kim jestem:</h1><br/>consectetur adipiscing elit. Duis metus lorem, viverra in elit in, faucibus efficitur mi. Curabitur orci orci, tempor id aliquam eget, rutrum eget neque. Mauris scelerisque ante nisl, id placerat ligula sagittis ac. Duis dolor sapien, congue a aliquet sit amet, convallis ac odio. ';
+	}
+		function k2()
+	{
+		document.getElementById("tile5").innerHTML ='<h1>Oferuje:</h1><br/>iverra in elit in, faucibus efficitur mi. Curabitur orci orci, tempor id aliquam eget, rutrum eget neque. Mauris scelerisque ante nisl, id placerat ligula sagittis ac. Duis dolor sapien, congue a aliquet sit amet, convallis ac odio. ';
+	}
+		function k3()
+	{
+		document.getElementById("tile5").innerHTML ='<h1>Wyksztalcenie:</h1><br/>consectetur adipiscing elit. cibus efficitur mi. Curabitur orci orci, tempor id aliquam eget, rutrum eget neque. Mauris scelerisque ante nisl, id placerat ligula sagittis ac. Duis dolor sapien, congue a aliquet sit amet, convallis ac odio. ';
+	}
+		function k4()
+	{
+		document.getElementById("tile5").innerHTML ='<h1>Dane kontaktowe:</h1><br/>consectetur adipiscing elit. Duis metus lorem, viverra in elit in, faucibus efficitur mi. Curabitur orci orci, tempor id aliquam eget, rutrum eget neque. Mauris scelerisque ant, convallis ac odio. ';
+	}
+		function k5()
+	{
+		document.getElementById("tile5").innerHTML ='<h1>STRONA GŁÓWNA</h1><br/>Lorem, viverra in elit in, faucibus efficitur mi. Curabitur orci orci, tempor id aliquam eget, rutrum eget neque. Mauris scelerisque ant, convallis ac odio. ';
+	}
+	
+	
+		function wyswietl_tw()
+	{
+		document.getElementById("tile5").innerHTML = '<img src="niemam.jpg" id="obraz_niemam"/>';
+	}
+	
+	//utworzenie funkcji o nazwie czas
+    function czas() {
+        var data = new Date(); //tworzymy obiekt typu data
+        var godzina = data.getHours(); //pobieramy godzinę
+        var minuta = data.getMinutes(); //pobieramy minutę
+        var sekunda = data.getSeconds(); //pobieramy sekundy
+ 
+        // przypisanie zera do godziny, minuty i sekundy, czyli np. 05 a nie 5
+        if (godzina < 10) {
+            godzina = "0" + godzina;
+        }
+        if (minuta < 10) {
+            minuta = "0" + minuta;
+        }
+        if (sekunda < 10) {
+            sekunda = "0" + sekunda;
+        }
+ 
+        //wyświetlenie zegarka w divie o id zegar
+        document.querySelector("#zegar").innerHTML = godzina + " : " + minuta + " : " + sekunda;
+ 
+        setTimeout(czas, 1000); //samowywołanie się funkcji po 1s
+    }
+    window.addEventListener("load", czas); //wywołanie funkcji czas po załadowaniu strony
+
+</script>
+	
+	
+	
+</body>
+</html>

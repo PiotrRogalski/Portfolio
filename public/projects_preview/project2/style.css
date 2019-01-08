@@ -1,0 +1,173 @@
+body
+{
+	background-color: #303030;
+	color: #ffffff;
+	font-family: 'Lato', sans-serif;
+	font-size:20px;
+}
+#container
+{
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.rectangle
+{
+	width:960px;
+	margin:20px;
+	text-align:center;
+}
+.square
+{
+	width:50%;
+	float:left;
+	text-align:center;
+}
+#logo
+{
+	font-family: 'Josefin Sans', sans-serif;
+	float:left;
+	font-size:70px;
+	width:600px;
+	text-align:left;
+}
+#logo:hover
+{
+	cursor:pointer;
+	color:#aaaaaa;
+}
+#zegar
+{
+	float:left;
+	font-size:70px;
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:left;
+}
+.tile1
+{
+	float:left;
+	margin:10px;
+	width:230px;
+	height:142px;
+	background-color: #3095d3;
+}
+
+.tile1:hover
+{
+	background-color: #2084c2;
+	cursor:pointer;
+}
+.tile2
+{
+	float:left;
+	margin:10px;
+	width:230px;
+	height:142px;
+	background-color: #666666;
+}
+.tile2:hover
+{
+	background-color: #555555;
+	cursor:pointer;
+}
+.tile3
+{
+	float:left;
+	margin:10px;
+	width:230px;
+	height:142px;
+	background-color: #93c748;
+}
+.tile3:hover
+{
+	background-color: #82b637;
+	cursor:pointer;
+}
+.tile4
+{
+	margin:10px;
+	width:420px;
+	height:82px;
+	background-color: #ee5a32;
+	font-size:26px;
+	padding:30px;
+	line-height:150%;
+}
+#tile5
+{
+	margin:10px;
+	width:440px;
+	height:264px;
+	background-color: #666666;
+	text-align:justify;
+	padding:20px;
+}
+
+.yt
+{
+	float:left;
+	margin:10px;
+	width:105px;
+	height:142px;
+	background-color: #d94348;
+}
+.yt:hover
+{
+	background-color: #c83237;
+}
+.fb
+{
+	float:left;
+	margin:10px;
+	width:105px;
+	height:142px;
+	background-color: #4668b3;
+}
+.fb:hover
+{
+	background-color: #3557a2;
+}
+.gplus
+{
+	float:left;
+	margin:10px;
+	width:105px;
+	height:142px;
+	background-color: #d95333;
+	text-align:left;
+}
+.gplus:hover
+{
+	background-color: #c84222;
+}
+.tw
+{
+	float:left;
+	margin:10px;
+	width:105px;
+	height:142px;
+	background-color: #3095d3;
+	cursor:pointer;
+	
+}
+.tw:hover
+{
+	background-color: #2084c2;
+}
+a.link
+{
+	color:#ffffff;
+	text-decoration:none;
+}
+img
+{
+	width:400px;
+	height:248px;
+	padding:5px;
+	border-radius: 10%;
+}
+h1
+{
+	text-align:center;
+	font-size:24px;
+}

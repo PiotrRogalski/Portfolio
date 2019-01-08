@@ -1,0 +1,189 @@
+
+	* {
+		/*avooid copying text*/
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+	}
+	.jumbotron {
+		background: url(data/images/166.jpg);
+		background-size: 100% 100%;
+		height: 50vw;
+		border-radius: 0px;
+		border-bottom: 5px solid #dbc5b2;
+	}
+
+	.logo_cl {
+		width: 7vw;
+		height: 7vw;
+	}
+
+	.featured {
+		color: white;
+	}
+
+	.featured p {
+		font-size: 2vw;
+		margin-bottom: 40px;
+		width: 110%;
+	}
+
+	.featured h1 {
+		width: 110%;
+		margin-top: 5vw;
+		font-size: 5vw;
+	}
+
+	.btn-compatypV3 {
+		color: white;
+		background-color: rgb(145,82,58, 0.5);
+		border: 1px solid white;
+		font-weight: 700;
+		padding: 5px 30px;
+		margin-right: 10px;
+	}
+
+	.btn-compatypV3:focus {
+		-webkit-box-shadow: 0px 0px 18px 5px rgba(255,255,255,0.6);
+		-moz-box-shadow: 0px 0px 18px 5px rgba(255,255,255,0.6);
+		box-shadow: 0px 0px 18px 5px rgba(255,255,255,0.6);
+	}
+
+	.btn-compatypV3:hover {
+		background-color: rgb(145,82,58);
+		color: white;
+	}
+
+	.trial {
+		width: 100%;
+		text-align: center;
+		padding: 0px 0 40px 0;
+	}
+
+	.trial h2 {
+		margin-bottom: 80px;
+	}
+
+	.btn_com {
+		margin-top: 10px;
+		width: 370px;
+		height: 100px;
+	}
+
+	.footer {
+		background-color: #acb4a1;
+		height: 50px;
+		border-top: 5px solid #dbc5b2;
+	}
+
+	.footer p {
+		margin: 10px 0 0 50px;
+	}
+
+	.btn_com:hover {
+		filter: invert(100%);
+		color: white;
+		cursor: pointer;
+	}
+
+	h2 {
+		font-size: 48px;
+	}
+
+
+@media (min-width: 480px) and (max-width: 768px) {
+
+	.jumbotron {
+		height: 340px;
+		margin: 0;
+	}
+
+	.logo_cl {
+		width: 50px;
+		height: 50px;
+	}
+
+	.featured h1 {
+		margin-top: 20px;
+		font-size: 36px;
+		width: 100%;
+	}
+
+	.featured p {
+		margin-bottom: 20px;
+		font-size: 14px;
+		width: 100%;
+	}
+
+	.logo_container_cl {
+		text-align: center;
+	}
+
+	.featured {text-align: center;}
+	.btn_com {
+		margin: 0px 0 10px 0;
+		width: 185px;
+		height: 50px;
+	}
+
+	.trial h2 {
+		margin-bottom: 40px;
+	}
+
+}
+
+@media (max-width: 480px) {
+
+	.jumbotron {
+		height: 400px;
+		margin: 0;
+	}
+
+	.logo_cl {
+		width: 40px;
+		height: 40px;
+	}
+
+	.featured h1 {
+		width: 100%;
+		margin-top: 10px;
+		font-size: 32px;
+	}
+
+	.featured p {
+		width: 100%;
+		margin-bottom: 20px;
+		font-size: 16px;
+	}
+
+	.logo_container_cl {
+		text-align: center;
+	}
+
+	.featured {
+		text-align: center;
+	}
+
+	.btn-compatypV3 {
+		width: 80%;
+		margin-top: 10px;
+	}
+
+	.btn_com {
+		width: 185px;
+		height: 50px;
+		margin-left: 1px;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+	
+	.trial h2 {
+		margin-bottom: 20px;
+	}
+	
+}

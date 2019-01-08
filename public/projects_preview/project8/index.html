@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1"/>
+    <title>Retrogranie</title>
+    <meta name="description" content="Serwis o staryc grach pochodzących z Nitendo Entertaiment System" />
+    <meta name="keywords" content="gry, komputerowe, retro, nes, konsole, retrogranie, stare gry"/>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <!-- czcionka "Lato"-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet"/> 
+    <!--fontello-->
+    <link rel="stylesheet" href="css/fontello.css" type="text/css"/>
+
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <div class="header">
+
+        <div class="logo">
+          <img src="pad.png" style="float:left;"/>
+          <span style="color:#c34f4f">retro</span>granie.com
+          <div style="clear:both;"></div>
+        </div>
+        <div class="nav">
+          <ol>
+            <li><a href="#">Strona główna</a></li>
+            <li><a href="#">Klasyki NES</a>
+              <ul>
+                <li><a href="#">Contra</a></li>
+                <li><a href="#">Mario Bros</a></li>
+                <li><a href="#">Duck Tales</a></li>
+                <li><a href="#">Legend of Zelda</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Gry filmowe</a>
+              <ul>
+                <li><a href="#">Home alone</a></li>
+                <li><a href="#">Dick tracy</a></li>
+                <li><a href="#">The Simpsons</a></li>
+                <li><a href="#">Top Gun</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Bijatyki</a>
+              <ul>
+                <li><a href="#">Mortal Kombar</a></li>
+                <li><a href="#">Nekketsu K.D</a></li>
+                <li><a href="#">Double Dragon</a></li>
+                <li><a href="#">turtles</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Gry sportowe</a>
+            <ul>
+                <li><a href="#">Mortal Kombar</a></li>
+                <li><a href="#">Nekketsu K.D</a></li>
+                <li><a href="#">Double Dragon</a></li>
+                <li><a href="#">turtles</a></li>
+              </ul>
+            </li>
+            <li><a href="#">O autorze</a></li>
+          </ol>
+        </div>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, ex. Saepe distinctio suscipit dolorum ratione beatae, nulla mollitia! Error exercitationem dolor unde consectetur enim rerum eius repellat accusamus eaque, illo.</p>
+          <p>Modi, autem labore dolores quo numquam minus hic, veritatis optio porro placeat distinctio ratione! Reprehenderit fugiat asperiores voluptates, doloribus nemo aspernatur quidem, incidunt veniam assumendaQuos assumenda optio rerum eum fugit voluptate excepturi, earum error harum, expedita, sapiente dignissimos adipisci tempore! Quis in accusamus saepe, recusandae dicta asperiores molestiae, nisi, alias aliquid corrupti a cumque!</p>
+          <p>Modi, autem labore dolores quo numquam minus hic, veritatis optio porro placeat distinctio ratione! Reprehenderit fugiat asperiores voluptates, doloribus nemo aspernatur quidem, incidunt veniam assumendaLaboriosam obcaecati quos nam, non repellendus est nobis perspiciatis ipsam maxime quia eveniet delectus sapiente dolores deleniti iure quod. Consequuntur voluptatum eligendi quos excepturi magnam ipsum quas inventore itaque aperiam.</p>
+          <p>Modi, autem labore dolores quo numquam minus hic, veritatis optio porro placeat distinctio ratione! Reprehenderit fugiat asperiores voluptates, doloribus nemo aspernatur quidem, incidunt veniam assumendaIpsam quidem, itaque inventore accusamus dolor, corporis nesciunt libero, excepturi reiciendis reprehenderit atque tempore vitae molestias? Adipisci nobis, itaque et excepturi aliquid, tenetur officia asperiores odio, Modi, autem labore dolores quo numquam minus hic, veritatis optio porro placeat distinctio ratione! Reprehenderit fugiat asperiores voluptates, doloribus nemo aspernatur quidem, incidunt veniam assumendaIpsam quidem, itaque inventore accusamus dolor, corporis nesciunt libero, excepturi reiciendis reprehenderit atque tempore vitae molestias? Adipisci nobis, itaque et excepturi aliquid, tenetur officia asperiores odio, Modi, autem labore dolores quo numquam minus hic, veritatis optio porro placeat distinctio ratione! Reprehenderit fugiat asperiores voluptates, doloribus nemo aspernatur quidem, incidunt veniam assumendaIpsam quidem, itaque inventore accusamus dolor, corporis nesciunt libero, excepturi reiciendis reprehenderit atque tempore vitae molestias? Adipisci nobis, itaque et excepturi aliquid, tenetur officia asperiores odio, molestiae quasi, est ratione!</p>
+          <p>Quidem recusandae doloremque voluptatum possimus. Modi, autem labore dolores quo numquam minus hic, veritatis optio porro placeat distinctio ratione! Reprehenderit fugiat asperiores voluptates, doloribus nemo aspernatur quidem, incidunt veniam assumenda.</p>
+        </div>
+        <div class="socials">
+          <div class="socialdivs">
+            <div class="fb"><i class="icon-facebook"></i></div>
+            <div class="yt"><i class="icon-youtube"></i></div>
+            <div class="tw"><i class="icon-twitter"></i></div>
+            <div class="gplus"><i class="icon-gplus"></i></div>
+            <div style="clear:both;"></div>
+          </div>
+        </div>
+        <div class="footer">Piotr Rogalski &copy 2018 Thank you for your visit Mario but our princess is in another castle ;)</div>
+      </div>
+    </div>
+    
+    <script src="jquerymin.js"></script>
+    <script>
+      $(document).ready(function() {
+        var NavY = $('.nav').offset().top;
+
+        var stickyNav = function() {
+          var ScrollY = $(window).scrollTop();
+
+          if (ScrollY > NavY) {
+            $('.nav').addClass('sticky');
+          } else {
+            $('.nav').removeClass('sticky');
+          }
+        };
+
+        stickyNav();
+
+        $(window).scroll(function() {
+          stickyNav();
+        });
+      });
+    </script>
+
+  </body>
+</html>

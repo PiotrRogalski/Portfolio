@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $projects = Project::orderBy('created_at', 'desc')->paginate(10);
-        return view('index')->with('projects', $projects);
+        //
     }
 
     /**
@@ -46,8 +46,28 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        //
+        $project->load('technologies');
+        $title = 'Podgląd projektu';
+        return view('pages.showProject', compact('project','title'));
     }
+
+     /**
+     * Display the specified resource.
+     *
+     * @param  \App\Project  $project
+     * @return \Illuminate\Http\Response
+     */
+    public function showPhoto(Project $id)
+    {
+        if (!is_null($project->images_url)){ 
+          $links = explode(',',$project->images_url);
+          $url = 'images/'.$links[$id];
+        }else{
+          $url = 'images/noimage.jpg';
+        }
+        echo $url;
+    }
+
 
     /**
      * Show the form for editing the specified resource.

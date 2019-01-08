@@ -1,0 +1,2 @@
+<?php 
+// composer dump-autoload

@@ -11,10 +11,7 @@
 |
 */
 Route::get('/', 'PageController@index');
-Route::get('/show', 'PageController@showProject');
 Route::get('/about', 'PageController@about');
 
-
-
-
 Route::resource('projects','ProjectController');
+Route::resource('technologies','TechnologyController');
