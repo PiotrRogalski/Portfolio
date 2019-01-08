@@ -7,7 +7,7 @@
 @endphp
 
 <!-- header-->
-<header id="head" class="masthead text-white text-left">
+<header id="head" class="masthead text-white text-left" style="background: url({{  url('/images/bg2.jpeg') }} )no-repeat center center fixed;)">
   <div class="overlay"></div>
     <div class="row">
       <div class="offset-sm-1"></div>
