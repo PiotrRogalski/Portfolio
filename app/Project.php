@@ -9,9 +9,15 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Project extends Model
 {
+
 	public function technologies()
 	{
 		return $this->belongsToMany(Technology::class);
+	}
+
+	public function previousPageWithPosition()
+	{
+		return url()->previous().'#'.$this->title;
 	}
 
 	public function getFirstParagraph()

@@ -12,7 +12,8 @@
     <div class="row">
       <div class="offset-sm-1"></div>
       <div class="ml-1 col-12 col-sm-8 col-md-6 mx-left shadow">
-        <p class="lora text-center piotr-roglaski-text">Piotr Rogalski</p>
+        <img src="{{url('/images/LogoMakr_4YzPbi.png')}}" width="50" height="50" alt="">
+        <h1 class="lora text-center text-shadow-md">Piotr Rogalski</h1>
         <div class="row pt-2">
           <a class="{{ $btn_classes }}" href="#projects_section">Projekty</a>
           <a class="{{ $btn_classes }}" href="#contact_section">Kontakt</a>
@@ -28,7 +29,7 @@
 <!-- Icons Grid -->
 <section class="pt-5 pb-5 bg-light text-center">
   <div class="container">
-     <h1 class="lora mb-5 full-stack-text">Full Stack Dev</h1>        
+     <h1 class="lora mb-5">Full Stack Dev</h1>        
   </div>
   <div class="container">
     <div class="row">
@@ -64,12 +65,12 @@
 
 <!-- Image Showcases -->
 <div class="row">
-    <div class="mb-4 mx-auto pagination-lg">{{ $projects->links() }}</div>
+    <div class="mb-4 mx-auto pagination-lg">{!! str_replace('  ','',$projects->links()) !!}</div>
   </div>
 <section class="showcase" id="projects_section">
   <div class="container-fluid p-0">
     @foreach($projects as $id => $project)
-      <div class="row no-gutters">
+      <div id="{{ $project->title }}" class="row no-gutters">
           <div class="col-lg-6 {{ ($id%2)?'order-lg-2':''}} text-white showcase-img" 
                style="background-image: url({{ $project->getFirstImage() }}); background-position: center;">
           </div>
@@ -86,35 +87,37 @@
     @endforeach
   </div>
   <div class="row">
-    <div class="mt-4 mx-auto pagination-lg">{{ $projects->links() }}</div>
+    <div class="mt-4 mx-auto pagination-lg">{!! str_replace('  ','',$projects->links()) !!}</div>
   </div>
 </section>
+
+
 
 <!-- Testimonials -->
 <section class="testimonials text-center bg-light" id="contact_section">
   <div class="container">
     <h2 class="mb-5">Kontakt</h2>
     <div class="row">
-      <div class="col-lg-4"> 
+      <div class="col-4"> 
         <a href="https://www.facebook.com/piotr.rogalskii" target="_blank">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0 veil unveil">
             <i class="icon-facebook"></i>
-            <h5 class="text-white mt-2">Facebook</h5> 
+            <h5 class="text-white">Facebook</h5> 
           </div>
         </a>
       </div>
-      <div class="col-lg-4">
+      <div class="col-4">
         <a href="mailto: piotr5rogalski@gmail.com" target="_blank">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0 veil unveil">
             <i class="icon-gmail pr-3"></i> 
-            <h5 class="text-white mt-2">Gmail</h5> 
+            <h5 class="text-white">Gmail</h5> 
           </div>
         </a>
       </div>
-      <div class="col-lg-4">
+      <div class="col-4">
         <div class="testimonial-item mx-auto mb-5 mb-lg-0 veil unveil">
           <i class="icon-phone"></i> 
-          <h5 class="text-white mt-2">506 901 791</h5>
+          <h5 class="text-white">506 901 791</h5>
         </div>
       </div>
     </div>

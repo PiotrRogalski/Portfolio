@@ -46,7 +46,7 @@
           
           <!-- back to the top button -->
             <div id="backToTop" class="back-to-top">
-              <i class="fa fa-angle-up"></i>
+              <i class="icon-up-big"></i>
             </div>
 
         </div>

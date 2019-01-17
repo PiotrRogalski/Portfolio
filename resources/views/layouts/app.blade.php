@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="keywords" content="portfolio piotra rogalskiego, piotr rogalski, programista, webdev, portfolio"/> 
-  <meta name="description" content="Piotr Rogalski - web develper - portfolio ">
+  <meta name="keywords" content="frontend developer, backend developer, portfolio piotra rogalskiego, piotr rogalski, programista, webdev, portfolio"/> 
+  <meta name="description" content="Piotr Rogalski - web developer - portfolio">
   <meta name="author" content="Piotr Rogalski">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>{{ $title }}</title>
@@ -12,6 +12,7 @@
     href="https://fonts.googleapis.com/css?family=Kumar+One+Outline|Open+Sans+Condensed:300&amp;subset=latin-ext"
     rel="stylesheet">
   <!-- styles -->
+  <link rel="shortcut icon" href="{{url('/images/logo.png')}}">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{ asset('css/user.css') }}" rel="stylesheet">

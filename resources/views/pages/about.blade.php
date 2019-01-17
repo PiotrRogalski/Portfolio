@@ -14,7 +14,7 @@
 	<!-- about and photo -->
 	<div class="row ">
 		<div class="col-12 col-md-9 p-5">
-			<h1>O mnie</h1>
+			<h2>O mnie</h2>
 			<div class="mt-4">
 				<p>Moja przygoda z programowaniem zaczęła się na początku września 2018 r. Od tego czasu, niemalże cały wolny czas poświęcam na naukę. Średnio jest to osiem godzin ale bywały dni, że dochodziło do czternastu godzin. Moim mentorem jest brat - programista, który napisał swój pierwszy kod 10 lat temu.</p>
 
@@ -25,11 +25,10 @@
 
 				<p>Moim ulubionym środowiskiem jest PHPStorm, którym coraz sprawniej się posługuję, dzięki poznawanemu wachlarzowi skrótów klawiszowych ale naukę rozpocząłem od podstawowych IDE, takich jak Sublime Text 3 oraz Notatnik.</p>
 
-				<p>Poniżej znajdują się wykresy przedstawiające poziom moich umiejętności na dzień {{ 
-				 $lastUpdate }} r.</p>
+				<p>Poniżej znajdują się wykresy przedstawiające poziom moich umiejętności na dzień {{ $lastUpdate }} r.</p>
 			</div>
 		</div>
-		<img class="col-12 col-md-3 h-50 pt-2 pb-2" src="{{ url('images/me.jpg') }}" alt="">
+		<img class="col-12 col-md-3 h-50 pt-2 pb-2" src="{{ url('images/avatar.jpg') }}" alt="">
 	</div>
 
 	<!-- statistics -->
@@ -67,7 +66,7 @@
 						'bg-primary',
 						'bg-success',
 						'bg-warning',
-						'bg-danger'
+						'bg-danger',
 					];
 				@endphp
 

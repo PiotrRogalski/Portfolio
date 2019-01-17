@@ -6,7 +6,7 @@
 
 	<div class="row mt-1 mb-2">
 		<div class="col-12 col-md-6" >
-			<a href="{{ url()->previous() }}">
+			<a href="{{ $project->previousPageWithPosition() }}">
 				<div class="btn btn-dark pl-5 pr-5">◄ POWRÓT</div>
 			</a>
 		</div>
@@ -21,12 +21,12 @@
 		<div class="carousel-inner">
 			@foreach($project->getProjectPhotos() as $photo_id => $photo)
 				<div class="carousel-item   {{ ($photo_id == 0)?'active':'' }}">
-		      		<img class="d-block w-100 vh-carousel" src="{{ $project->getPhotoUrl($photo_id) }}" alt="{{ $photo_id }} slide">
-		      		<div class="carousel-caption d-none d-md-block">
-		      			<div class="badge badge-secondary text-shadow-sm" style="font-size: 16px;">
+		      		<img class="d-block w-100 h-auto" src="{{ $project->getPhotoUrl($photo_id) }}" alt="{{ $photo_id }} slide">
+		      		<h5 class="carousel-caption d-none d-md-block">
+		      			<div class="badge badge-secondary text-shadow-sm">
 		      				{!! $project->getPhotoDescription($photo_id) !!}
 		      			</div>
-					</div>
+					</h5>
 		    	</div>
 			@endforeach
 		 </div>

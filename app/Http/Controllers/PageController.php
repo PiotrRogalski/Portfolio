@@ -17,11 +17,11 @@ class PageController extends Controller
         
         return view('index', compact('title', 'projects'));
 	}
-
+/*
 	public function showProject()
 	{
 		return view('pages.showProject');		
-	}
+	}*/
 
 	public function about()
 	{
@@ -32,4 +32,5 @@ class PageController extends Controller
 
         return view('pages.about', compact('title', 'technologies', 'lastUpdate','technology_categories'));
 	}
+	
 }

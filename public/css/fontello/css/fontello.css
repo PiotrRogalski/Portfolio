@@ -55,6 +55,7 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
+.icon-up-big:before { content: '\e80d'; font-size: 6vmin; margin: 1.8vmin auto 0 auto;} /* '' */
 .icon-github-circled-alt2:before { content: '\f056';} /* '' */
 .icon-eye:before { content: '\e80b'; } /* '' */
 .icon-cog-alt:before { content: '\e800'; } /* '' */
@@ -63,13 +64,13 @@
 .icon-camera:before { content: '\e803'; } /* '' */
 .icon-cancel-squared:before { content: '\e804'; } /* '' */
 .icon-hourglass:before { content: '\e805'; } /* '' */
-.icon-gmail:before { content: '\e806';  font-size:76px;  margin-top:60px; } /* '' */
+.icon-gmail:before { content: '\e806';  font-size: 12vmin;  margin-top: 8vmin;} /* '' */
 .icon-th-outline:before { content: '\e807'; } /* '' */
 .icon-th-list-outline:before { content: '\e808'; } /* '' */
 .icon-th-large-outline:before { content: '\e809'; } /* '' */
 .icon-picture:before { content: '\e80a'; } /* '' */
-.icon-phone:before { content: '\e80c'; font-size:76px;  margin-top:60px;} /* '' */
-.icon-facebook:before { content: '\f09a';  font-size:76px;  margin-top:60px;} /* '' */
+.icon-phone:before { content: '\e80c'; font-size:12vmin;  margin-top: 8vmin;} /* '' */
+.icon-facebook:before { content: '\f09a';  font-size:12vmin;  margin-top: 8vmin;} /* '' */
 .icon-docs:before { content: '\f0c5'; } /* '' */
 .icon-doc-text:before { content: '\f0f6'; } /* '' */
 .icon-plus-squared-alt:before { content: '\f196'; } /* '' */ 
@@ -81,8 +82,8 @@
 
 .veil{
   z-index: 0;
-  width: 200px;
-  height: 200px;
+  width: 28vmin;
+  height: 28vmin;
   border-radius: 100%;
   position: relative;
   overflow: hidden;
@@ -119,3 +120,32 @@
   height: 180%;  
 }
 
+@media (max-height: 300px) {
+
+ .icon-up-big:before { 
+    content: '\e80d'; 
+    font-size: 20px; 
+    margin: 2px auto 0 auto;
+  } /* '' */
+
+  .back-to-top {
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
+@media (min-height: 800px) {
+
+ .icon-up-big:before { 
+    content: '\e80d'; 
+    font-size: 40px; 
+    margin: 2px auto 0 auto;
+  } /* '' */
+
+  .back-to-top {
+    width: 60px;
+    height: 60px;
+  }
+
+}
