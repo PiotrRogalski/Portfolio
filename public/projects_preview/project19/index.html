@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Style changer</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<style>
+  .trans {
+    transition: all 0.5s;
+  }
+</style>
+</head>
+<body class="bg-dark pt-5">
+
+<div id="app" class="mt-5 ">
+  <div class="container bg-white p-5 rounded">
+    <div class="row">
+      <div class="col-12 col-lg-3">
+        <button :class="btnClass" class="trans">Change Me!</button>
+      </div>
+      <div class="col">
+        <p v-if="!deleting">Actually have classes {{ btnClass }}</p>
+        <h1 class="text-danger" v-if="deleting">Now you are in delete mode</h1>
+      </div>
+    </div>
+    <hr>
+    <div class="row mt-2">
+      <div class=" col-lg-4 text-right"><b>Add your bootstrap class:</b></div>
+      <div class=" col-lg-4 mt-2">
+        <input type="text" v-model="newClass" class="col">
+      </div>
+      <div class="col-lg-4 mt-2">
+        <div class="row">
+          <div class="col">
+            <button class="col btn btn-success btn-sm" @click="addClass">Add</button>
+          </div>
+          <div class="col">
+            <button class="col btn btn-sm" :class="(deleting) ? 'btn-danger' : 'btn-outline-danger'" 
+                    @click="changeDelete">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+   <div class="row mt-3">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2 mt-2" v-for="(className, id) in classes">
+        <button @click="changeStatus(id)" :class="{active: classStatus[id], disabled : !classStatus[id]}"
+          class="col btn btn-secondary trans">{{ className }}</button>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+<!-- vue -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+
+ var vm = new Vue ({
+  el: '#app',
+
+  data: 
+  {
+    deleting: false,
+    inRow: 5,
+    newClass: 'bg-danger',
+    btnClass: 'empty',
+    classes: ['col', 'btn', 'btn-dark','btn-lg', 'btn-outline-danger'],
+    classStatus: [false, false, false, false, false],
+  },
+
+  methods: 
+  {
+    changeStatus: function(id) {
+      if(this.deleting) {
+        this.classes.splice(id,1);
+        this.classStatus.splice(id,1);
+      return
+      }
+       this.classStatus[id] = !this.classStatus[id];
+       this.setClass();
+    },
+
+    getStatus: function(id) {
+      return this.classStatus[id];
+    },
+
+    setClass: function() {
+      var newClasses = '';
+      var id;
+      var length = this.classes.length;
+      for(id = 0; id < length; ++id) {
+        if (this.classStatus[id]) {
+          newClasses += this.classes[id] + ' ';
+        }
+      }
+      return this.btnClass = newClasses
+    },
+
+    addClass: function() {
+      if (this.newClass == '') {
+        return
+      }
+      this.deleting = false;
+      this.classStatus.push(false);
+      this.classes.push(this.newClass);
+    },
+
+    changeDelete: function() {
+      this.deleting = !this.deleting;
+    },
+
+  },
+
+});
+
+
+</script>
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</body>
+</html>

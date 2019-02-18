@@ -64,13 +64,13 @@
 .icon-camera:before { content: '\e803'; } /* '' */
 .icon-cancel-squared:before { content: '\e804'; } /* '' */
 .icon-hourglass:before { content: '\e805'; } /* '' */
-.icon-gmail:before { content: '\e806';  font-size: 12vmin;  margin-top: 8vmin;} /* '' */
+.icon-gmail:before { content: '\e806';  font-size: 64px;  margin-top: 30%; margin-right: 5px;} /* '' */
 .icon-th-outline:before { content: '\e807'; } /* '' */
 .icon-th-list-outline:before { content: '\e808'; } /* '' */
 .icon-th-large-outline:before { content: '\e809'; } /* '' */
 .icon-picture:before { content: '\e80a'; } /* '' */
-.icon-phone:before { content: '\e80c'; font-size:12vmin;  margin-top: 8vmin;} /* '' */
-.icon-facebook:before { content: '\f09a';  font-size:12vmin;  margin-top: 8vmin;} /* '' */
+.icon-phone:before { content: '\e80c'; font-size: 64px;  margin-top: 30%;} /* '' */
+.icon-facebook:before { content: '\f09a';  font-size: 64px;  margin-top: 30%;} /* '' */
 .icon-docs:before { content: '\f0c5'; } /* '' */
 .icon-doc-text:before { content: '\f0f6'; } /* '' */
 .icon-plus-squared-alt:before { content: '\f196'; } /* '' */ 
@@ -82,8 +82,8 @@
 
 .veil{
   z-index: 0;
-  width: 28vmin;
-  height: 28vmin;
+  height: 180px;
+  width: 180px; 
   border-radius: 100%;
   position: relative;
   overflow: hidden;
@@ -120,22 +120,51 @@
   height: 180%;  
 }
 
-@media (max-height: 300px) {
+@media (max-width: 500px) 
+{
+
+  .veil { 
+    height: 140px;
+    width: 140px; 
+  }
+
+  .icon-gmail:before {
+    font-size: 48px;
+    padding-left: 2px;
+  }
+
+  .icon-phone:before {
+    font-size: 48px;
+  }
+
+  .icon-facebook:before {
+    font-size: 48px;
+  }
+
+}
+@media (max-height: 300px) 
+{
 
  .icon-up-big:before { 
     content: '\e80d'; 
     font-size: 20px; 
     margin: 2px auto 0 auto;
-  } /* '' */
+  }
 
   .back-to-top {
     width: 30px;
     height: 30px;
   }
 
+  .page-link {
+    min-width: 24px;
+    min-height: 24px;
+  }
+
 }
 
-@media (min-height: 800px) {
+@media (min-height: 800px) 
+{
 
  .icon-up-big:before { 
     content: '\e80d'; 
@@ -146,6 +175,11 @@
   .back-to-top {
     width: 60px;
     height: 60px;
+  }
+
+  .page-link {
+    min-width: 32px;
+    min-height: 32px;
   }
 
 }

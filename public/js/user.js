@@ -19,6 +19,7 @@ $(document).ready(function() {
 //animation go to link
 $('a[href^="#"]').on('click', function(event) {
 
+if ($(this).hasClass('dontUsePathAnimation')==false){
     var target = $( $(this).attr('href') );
 
     if( target.length ) {
@@ -26,6 +27,7 @@ $('a[href^="#"]').on('click', function(event) {
       $('html, body').animate({
         scrollTop: target.offset().top
       }, 500);
+    }
     }
   });
 

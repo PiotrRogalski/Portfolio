@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Project extends Model
 {
+	private const NO_IMAGE_URL ='images/noimage.jpg'; 
 
 	public function technologies()
 	{
@@ -32,32 +33,36 @@ class Project extends Model
 
 	function getFirstImage() 
 	{
-	    $url = 'images/noimage.jpg';
-	    if (!is_null($this->images_url)){ 
+	    $url = static::NO_IMAGE_URL;
+
+	    if (!is_null($this->images_url)) { 
 	      $links = explode(',',$this->images_url);
 	      $link = 'images/'.$links[0];
 	      if (is_file($link)){
-	        $url = $link;
+	          $url = $link;
 	      }
 	    }
-    return $url;
+
+    	return $url;
   	}
 
-  	function getProjectPhotos()
+  	function getImages()
   	{
 		$links = [''];
 		$images_url = $this->images_url;
-		if (!is_null($images_url)){ 
+
+		if (!is_null($images_url)) { 
 			$images_url = str_replace([' ','\'','"'], '', $images_url);
 			$links = explode(',',$images_url);
 		}
+
 		return $links;
 	}
 
-	function getPhotoUrl($id)
+	function getImageUrl($id)
 	{
-		$photo_url = url('images/noimage.jpg');
-		$links  = $this->getProjectPhotos();
+		$photo_url = url(static::NO_IMAGE_URL);
+		$links  = $this->getImages();
 		$numb   = count($links);
 		if($id<$numb){
 			$link = 'images/'.$links[$id];
@@ -68,7 +73,7 @@ class Project extends Model
 		return $photo_url;
 	}
 
-	function getPhotoDescription($id)
+	function getImageDescription($id)
 	{
 		$val = $id + 1;
 		$photo_description = 'Zdjęcie:'.$val;

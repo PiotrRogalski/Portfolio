@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Watcher</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<style>
+	.container2 {
+		width: 1000px;
+		margin: 0 auto;
+		border: 1px solid black;
+		padding: 16px 32px;
+	}
+</style>
+</head>
+<body class="bg-dark pt-5">
+
+<div id="app" class="mt-5">
+	<div class="container2 bg-white">
+		<div class="row">
+			<div class="col">
+				<img :src="imageUrl" alt="No image found" height="400" width="400">
+				<label for="id1">Write ask:</label>
+				<input id="id1" v-model="question" type="text" placeholder="Here your ask">
+			</div>
+			<div class="col">
+				<h1>{{ answer }}</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+<!-- vue -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+ var vm = new Vue ({
+ 	el: "#app",
+
+ 	data: 
+ 	{
+ 		question: '',
+ 		answer: 'Ask a question to get yes/no answer',
+ 		imageUrl: 'https://cdn.dribbble.com/users/366584/screenshots/2554864/potato_walk.gif',
+ 	},
+
+ 	watch: 
+ 	{
+ 		question: function(newQuestion, oldQuestion) {
+ 			this.answer = 'Waiting for you to stop typing';
+ 			this.imageUrl = 'https://media.giphy.com/media/tXL4FHPSnVJ0A/giphy.gif';
+ 			this.debouncedGetData();
+ 		}
+ 	},
+
+ 	created: function() 
+ 	{
+ 		this.debouncedGetData = _.debounce(this.getData, 700);
+ 	},
+
+ 	methods: 
+ 	{
+ 		getData: function() {
+ 			if (this.question.indexOf('?') === -1) {
+ 				this.answer = 'Questions usually contain a question mark. ;-)';
+ 				this.imageUrl = 'https://media.giphy.com/media/xTiN0IuPQxRqzxodZm/giphy.gif';
+ 				return
+ 			}
+
+ 			this.answer = 'Thinking...';
+ 			this.imageUrl = 'https://media0.giphy.com/media/mvoxdYnpyk23u/giphy.gif';
+ 			var page = this;
+
+ 			axios.get('https://yesno.wtf/api')
+ 				.then (function(response) {
+ 					page.answer = _.capitalize(response.data.answer);
+ 					page.imageUrl = _.capitalize(response.data.image);
+ 				})
+ 				.catch (function(error) {
+ 					page.answer = 'Error! Could not rach the API.' + error;
+ 				})
+ 		},
+ 	},
+
+ });
+</script>
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</body>
+</html>

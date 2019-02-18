@@ -28,22 +28,22 @@
 				<p>Poniżej znajdują się wykresy przedstawiające poziom moich umiejętności na dzień {{ $lastUpdate }} r.</p>
 			</div>
 		</div>
-		<img class="col-12 col-md-3 h-50 pt-2 pb-2" src="{{ url('images/avatar.jpg') }}" alt="">
+		<img id="myAvatar" class="col-12 col-md-3 h-50 pt-2 pb-2" src="{{ url('images/avatar.jpg') }}" alt="">
 	</div>
 
 	<!-- statistics -->
 	<div class="row mt-2 pt-2 pb-2 badge-dark">
 		<div class="col-12 col-md-4 text-center mb-2">
 			<div class="col-12">Godzin tutoriali</div>
-			<div class="col-12 text-center btn btn-light btn-sm p-0 text-big">27</div>
+			<div class="col-12 text-center btn btn-light btn-sm p-0 text-big">31</div>
 		</div>
 		<div class="col-12 col-md-4 text-center mb-2">
 			<div class="col-12">Przeczytanych stron</div>
-			<div class="col-12 text-center btn btn-light btn-sm p-0 text-big">365</div>
+			<div class="col-12 text-center btn btn-light btn-sm p-0 text-big">672</div>
 		</div>
 		<div class="col-12 col-md-4 text-center mb-2">
 			<div class="col-12">Internetowych kursów</div>
-			<div class="col-12 text-center btn btn-light btn-sm p-0 text-big">45</div>
+			<div class="col-12 text-center btn btn-light btn-sm p-0 text-big">53</div>
 		</div>			
 	</div>
 
