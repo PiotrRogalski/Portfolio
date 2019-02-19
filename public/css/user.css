@@ -94,7 +94,6 @@ header.masthead h1 {
   .showProject-container {
     max-width: 1800px;
   }
-
 }
 
 .showcase .showcase-text {
@@ -225,11 +224,11 @@ footer.footer {
     font-family: 'Lora', serif;
 }
 
-.h-auto {
+.h-carousel {
   height: auto;
 }
 
-.w-auto {
+.w-carousel {
   width: auto;
 }
 

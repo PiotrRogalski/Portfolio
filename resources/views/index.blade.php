@@ -9,15 +9,15 @@
 <header id="head" class="masthead text-white text-left">
   <div class="overlay"></div>
     <div class="w-100">
-     <div class=" offset-sm-1">
+     <div class="offset-sm-1">
       <div class="col-12 col-sm-11 col-md-8 col-lg-7 col-xl-6 p-2 mx-left shadow">
         <h1 class="lora text-center text-shadow-md">Piotr Rogalski</h1>
         <div class="m-0 row pt-2 p-0">
           <div class="col-12 col-sm p-1">
-            <a class="{{ $btn_classes }}" href="#project-title-id">Projekty</a>
+            <a class="{{ $btn_classes }} use-path-animation" href="#project-title-id">Projekty</a>
           </div>
           <div class="col-12 col-sm p-1">
-            <a class="{{ $btn_classes }}" href="#contact_section">Kontakt</a>
+            <a class="{{ $btn_classes }} use-path-animation" href="#contact_section">Kontakt</a>
           </div>
           <div class="col-12 col-sm p-1">
             <a class="{{ $btn_classes }}" href="{{url('/about')}}">O mnie</a>
@@ -26,10 +26,6 @@
       </div>
     </div>
   </div>
-</header>
-
-
-
 </header>
 
 <div class="dark-line bg-dark col-12"></div>
@@ -88,7 +84,7 @@
                style="background-image: url({{ $project->getFirstImage() }}); background-position: center;">
           </div>
           <div class="col-12 col-lg-6  {{ ($id%2)?'order-lg-1':''}} my-auto showcase-text">
-            <h2 id="title-id{{ $id }}">#{{ $project->id }}-{!! $project->title !!}</h2>
+            <h2 id="title-id{{ $id }}">{!! $project->title !!}</h2>
             <p class="lead mb-0">{!! $project->getFirstParagraph() !!}</p>
             <div class="row">
               <a href="projects/{{$project->id}}" class="mt-5 col-10 mx-auto">
@@ -102,9 +98,7 @@
   @include('inc/pagination')
 </section>
 
-
 <!-- Testimonials -->
-
 <section class="testimonials text-center bg-light" id="contact_section">
   <div class="row col-12 mb-5 ml-0">
       <div class="col-12 col-md-6 mx-auto p-2">

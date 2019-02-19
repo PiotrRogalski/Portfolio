@@ -19,7 +19,7 @@ $(document).ready(function() {
 //animation go to link
 $('a[href^="#"]').on('click', function(event) {
 
-if ($(this).hasClass('dontUsePathAnimation')==false){
+if ($(this).hasClass('use-path-animation')==true){
     var target = $( $(this).attr('href') );
 
     if( target.length ) {
