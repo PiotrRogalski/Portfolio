@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="keywords" content="frontend developer, backend developer, portfolio piotra rogalskiego, piotr rogalski, programista, webdev, portfolio"/> 
-  <meta name="description" content="Piotr Rogalski - web developer - portfolio">
+  <meta name="description" content="Piotr Rogalski - full stack web developer - portfolio">
   <meta name="author" content="Piotr Rogalski">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>{{ $title }}</title>
