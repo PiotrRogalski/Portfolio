@@ -124,4 +124,4 @@ Yes, there always are problems - I've already made an update to solve some of th
 The programmer's job is to solve problems constantly. It can be said that this is one of the methods of learning.
 Fortunately, I managed to do the whole project in about a week.
 
-CREATED BY PIOTR ROGALSKI
+CREATED BY PIOTR ROGALSKI - 2019
