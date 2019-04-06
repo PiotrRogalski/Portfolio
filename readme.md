@@ -3,7 +3,7 @@
 Poland, 2019 JAN 20
 
 <div align="center">
-   <img src="https://piotrportfolio.pl/images/pr17a.png"/>
+   <img src="https://github.com/PiotrRogalski/Portfolio/blob/Default/public/images/pr17a.png"/>
 </div>
 
 ## Installation
