@@ -7,7 +7,7 @@
   <meta name="description" content="Piotr Rogalski - full stack web developer - portfolio">
   <meta name="author" content="Piotr Rogalski">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>{{ $title }}</title>
+  <title>{{ $title ?? 'Brak tytułu' }}</title>
   <link
     href="https://fonts.googleapis.com/css?family=Kumar+One+Outline|Open+Sans+Condensed:300&amp;subset=latin-ext"
     rel="stylesheet">
@@ -26,12 +26,10 @@
     @yield('content')
   </div>
 
-  <div id="app"><!-- vue --></div>
-
   @include('inc.footer')
 
   <script src="{{ asset('js/app.js') }}"></script>
-  <script src="{{ asset('js/user.js') }}"></script>
-
+  <script src="{{ asset('js/manifest.js') }}"></script>
+  <script src="{{ asset('js/vendor.js') }}"></script>
 </body>
 </html>
