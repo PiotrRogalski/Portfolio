@@ -10,8 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'PageController@index');
+Route::get('/', 'PageController@index')->name('home');
 Route::get('/about', 'PageController@about');
 
 Route::resource('projects','ProjectController');
 Route::resource('technologies','TechnologyController');
+
+Auth::routes(['register' => false]);
+
+Route::group(['middleware' => 'auth'], function()
+{
+    Route::get('/admin',['as' => 'admin', 'uses' => 'AdminController@index']);
+});
