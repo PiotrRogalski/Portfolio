@@ -1,4 +1,4 @@
-@extends('layouts.app')
+	@extends('layouts.app')
 
 @section('content')
 
@@ -16,16 +16,31 @@
 		<div class="col-12 col-md-9 p-5">
 			<h2>O mnie</h2>
 			<div class="mt-4">
-				<p>Moja przygoda z programowaniem zaczęła się na początku września 2018 r. Od tego czasu, niemalże cały wolny czas poświęcam na naukę. Średnio jest to osiem godzin ale bywały dni, że dochodziło do czternastu godzin. Moim mentorem jest brat - programista, który napisał swój pierwszy kod 10 lat temu.</p>
-
-				<p>Moim wyzwaniem jest zostać jednym z najlepszych programistów, dlatego stawiam na swój nieustanny rozwój. Obecnie rozwijam się w szerokopojętym programowaniu webowym, nie tylko ucząc się języków programowania ale także poznając frameworki, biblioteki i inne narzędzia, które ułatwiają pracę z kodem.
-				Skończyłem technikum elektroniczne, a swój wolny czas poświęcam na doskonalenie umiejętności związanych z programowaniem.</p>
-
-				<p>Oglądam wideokursy wysokiej jakości, czytam najlepsze książki i oczywiście praktykuję. Dzięki temu mam już podstawowe pojęcie o wzorcach projektowych, refaktoringu, programowaniu obiektowym. Uważam, że dzięki takiemu podejściu można uzyskać lepsze efekty niż na studiach poświęcając na dużo mniej czasu.</p>
-
-				<p>Moim ulubionym środowiskiem jest PHPStorm, którym coraz sprawniej się posługuję, dzięki poznawanemu wachlarzowi skrótów klawiszowych ale naukę rozpocząłem od podstawowych IDE, takich jak Sublime Text 3 oraz Notatnik.</p>
-
-				<p>Poniżej znajdują się wykresy przedstawiające poziom moich umiejętności na dzień {{ $lastUpdate }} r.</p>
+				@php
+					$now = \Carbon\Carbon::now();
+					$birthDate = \Carbon\Carbon::parse(env('BIRTH_DATE'));
+					$firstWebDate = \Carbon\Carbon::parse(env('FIRST_WEB_DATE'));
+					$firstProjectAge = $now->diffInMonths($firstWebDate);
+					$age = $birthDate->diffInYears($now);
+				  $ageSuffix = ($age >= 25 && $age <= 31) ? 'lat' : 'lata';
+				  $monthSuffix = ($age >= 25 && $age <= 31) ? 'miesiące' : 'miesięcy';
+				  $textDatetime = \Carbon\Carbon::parse('2019-09-25 20:45');
+					$textAge = $now->diffInHours($textDatetime);
+				@endphp
+				<p>
+					Jestem Piotr, mam <b>{{ $age .' '. $ageSuffix }}</b>. Swoją przygodę z programowaniem rozpocząłem
+					<b>{{ $firstProjectAge .' '. $monthSuffix }}</b> temu. Ten tekst ma już <b>{{ $textAge }} godzin</b>,
+					wiec jak widać czas ucieka a ja mam więcej pomysłów na projekty niż czasu na ich relizację.
+				</p>
+				<p>
+					Lubię pracować w zgranym zespole, mam doświadczenie z kontrolą wersji, więc branche, mergowanie czy cherry
+					picking nie są mi obce. <b>Szybko się uczę </b> - nauka od zera do programisy zajęła mi pół roku.
+					Obecnie mam <b>{{ $firstProjectAge - 6 }} miesięcy</b> doświadczenia komercyjnego.
+				</p>
+				<p>
+					W przyszłości chciałbym pogłębiać swoją wiedzę już nabytą i poszerzać ją o nowe dziedziny.
+					<a href="{{ asset('documents/CV_Piotr_Rogalski.pdf') }}" download>Moje umiejętności są wymienione w CV</a>.
+				</p>
 			</div>
 		</div>
 		<img id="myAvatar" class="col-12 col-md-3 h-50 pt-2 pb-2" src="{{ url('images/avatar.jpg') }}" alt="">
