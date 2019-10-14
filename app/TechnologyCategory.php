@@ -8,6 +8,6 @@ class TechnologyCategory extends Model
 {
     public function technologies()
 	{
-		return $this->belongsToMany(Technology::class);
+		return $this->hasMany(Technology::class, 'category_id');
 	}
 }

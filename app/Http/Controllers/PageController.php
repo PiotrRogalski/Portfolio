@@ -26,11 +26,9 @@ class PageController extends Controller
 	public function about()
 	{
 	    $title = 'O mnie';
-        $technologies = Technology::orderBy('skill_level', 'desc')->get();
-        $technology_categories = TechnologyCategory::all();
-        $lastUpdate = Project::latest('updated_at')->first()->updated_at->format('d.m.Y');
+        $technologyGroups = TechnologyCategory::with('technologies')->get();
 
-        return view('pages.about', compact('title', 'technologies', 'lastUpdate','technology_categories'));
+        return view('pages.about', compact('title', 'technologyGroups'));
 	}
 	
 }

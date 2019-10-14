@@ -12,7 +12,7 @@
 	</div>
 		
 	<!-- about and photo -->
-	<div class="row ">
+	<div class="row">
 		<div class="col-12 col-md-9 p-5">
 			<h2>O mnie</h2>
 			<div class="mt-4">
@@ -43,63 +43,23 @@
 				</p>
 			</div>
 		</div>
-		<img id="myAvatar" class="col-12 col-md-3 h-50 pt-2 pb-2" src="{{ url('images/avatar.jpg') }}" alt="">
+		<img id="myAvatar" class="col-12 col-md-3 h-50 pt-2 pb-2" src="{{ url('images/profile_img.jpg') }}" alt="">
 	</div>
 
-	<!-- statistics -->
-	<div class="row mt-2 pt-2 pb-2 badge-dark">
-		<div class="col-12 col-md-4 text-center mb-2">
-			<div class="col-12">Godzin tutoriali</div>
-			<div class="col-12 text-center btn btn-light btn-sm p-0 text-big">31</div>
-		</div>
-		<div class="col-12 col-md-4 text-center mb-2">
-			<div class="col-12">Przeczytanych stron</div>
-			<div class="col-12 text-center btn btn-light btn-sm p-0 text-big">672</div>
-		</div>
-		<div class="col-12 col-md-4 text-center mb-2">
-			<div class="col-12">Internetowych kursów</div>
-			<div class="col-12 text-center btn btn-light btn-sm p-0 text-big">53</div>
-		</div>			
+	<div class="text-center pt-4 pb-1">
+		<a href="{{ asset('documents/CV_Piotr_Rogalski.pdf') }}" download style="font-size: 48px;">
+				<b>Curriculum Vitae</b>
+		</a>
 	</div>
 
-	<!-- technology table progress-bars -->
-	<div class="row text-center pt-2 pb-3 text-shadow-sm text-white bg-dark border-top">
-		@for($i=0; $i <= 3; $i++)
-			<div class="col-12 col-md-6 col-lg-3 mt-2 mb-2 pl-4 pr-4">
+	<div class="A4-page-container shadow">
+		<img src="{{ asset('images/CV_Piotr_Rogalski-1.jpg') }}" alt="Brak podglądu CV"  style="width: 100%">
+	</div>
 
-			@foreach($technology_categories as $category)
-				@if ($category->id == $i+1)
-					<b>{{ $category->name }}</b>
-				@endif
-			@endforeach
+	<div style="height: 50px"></div>
 
-			@foreach($technologies as $technology)
-			
-				@php 
-					$skillLevel = $technology->skill_level * 100;
-					$progressbar_bg_color = [
-						'bg-primary',
-						'bg-success',
-						'bg-warning',
-						'bg-danger',
-					];
-				@endphp
-
-				@if($technology->category_id == $i+1)
-					<div class="progress mt-2">
-				  		<div class="progress-bar text-left pl-3 
-				  			{{ $progressbar_bg_color[$i] ?? '' }}"
-				  			 role="progressbar" aria-valuemin="0" 
-				  			 style="width: {{ $skillLevel }}%;" 
-				  			 aria-valuenow="{{ $skillLevel }}" 
-				  			 aria-valuemax="100">{{ $skillLevel }}% {{ $technology->name }}
-				  		</div>
-					</div>
-				@endif
-			@endforeach
-
-			</div>
-		@endfor
+	<div class="A4-page-container shadow">
+		<img src="{{ asset('images/CV_Piotr_Rogalski-2.jpg') }}" alt="Brak podglądu CV"  style="width: 100%">
 	</div>
 </div>
 @endsection

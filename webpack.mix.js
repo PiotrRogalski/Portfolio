@@ -15,3 +15,4 @@ mix.js('resources/js/app.js', 'public/js')
     .extract(['axios', 'jquery', 'lodash', 'bootstrap'])
     .sass('resources/sass/app.scss', 'public/css');
 
+mix.styles('resources/sass/components/cv.css', 'public/css/components/cv.css');
