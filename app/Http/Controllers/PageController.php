@@ -17,11 +17,6 @@ class PageController extends Controller
         
         return view('index', compact('title', 'projects'));
 	}
-/*
-	public function showProject()
-	{
-		return view('pages.showProject');		
-	}*/
 
 	public function about()
 	{

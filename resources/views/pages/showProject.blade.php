@@ -6,8 +6,8 @@
 
     <!-- photo carousel -->
     <div class="card">
-      <div class="card-header">
-        <div class="row">
+      <div>
+        <div class="row p-2">
           <div class="col-md-6">
             <a href="{{ $project->previousPageWithPosition() }}">
               <div class="btn btn-dark pl-5 pr-5">◄ POWRÓT</div>
@@ -18,6 +18,18 @@
               ({{ $project->created_at->diffForHumans() }})</b>
           </div>
         </div>
+
+        @auth
+          <div style="background-color: darkgoldenrod;" class="p-2">
+            @component('inc/uploadImage')
+              @slot('button')
+                <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#uploadImageModal">
+                  Wgraj zdjęcie
+                </button>
+              @endslot
+            @endcomponent
+          </div>
+        @endauth
       </div>
       @include('inc/carousel')
       <div class="card-body">
